@@ -1,7 +1,5 @@
 # Terminal-Themed Developer Portfolio
 
-![Portfolio Screenshot](public/images/portfolio-screenshot.png)
-
 A modern, responsive developer portfolio with a terminal-inspired design theme. This portfolio showcases skills, projects, and professional experience in a unique terminal/code editor aesthetic.
 
 ## ✨ Features
@@ -33,12 +31,14 @@ A modern, responsive developer portfolio with a terminal-inspired design theme. 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/my-portfolio.git
 cd my-portfolio
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 # or
@@ -46,6 +46,7 @@ yarn install
 ```
 
 3. Start the development server
+
 ```bash
 npm start
 # or
@@ -53,6 +54,7 @@ yarn start
 ```
 
 4. Build for production
+
 ```bash
 npm run build
 # or
@@ -80,6 +82,7 @@ The terminal theme is defined in `App.css` with variables for:
 ## 📱 Responsive Design
 
 This portfolio is fully responsive with breakpoints at:
+
 - 992px (desktop to tablet)
 - 768px (tablet to mobile)
 - 576px (small mobile devices)
@@ -87,6 +90,7 @@ This portfolio is fully responsive with breakpoints at:
 ## 🌐 Deployment
 
 The built project can be deployed to platforms like:
+
 - GitHub Pages
 - Netlify
 - Vercel

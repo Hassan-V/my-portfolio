@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const projectData = [
   {
@@ -8,7 +8,7 @@ const projectData = [
     techStack: ["React", "TypeScript", "CSS3", "Responsive Design"],
     githubUrl: "https://github.com/Hassan-V/my-portfolio",
     liveUrl: "#",
-    image: "/images/portfolio-project.webp" 
+    image: "/images/portfolio-project.webp",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projectData = [
     techStack: ["Java", "Spring Boot", "JWT", "RESTful API", "PostgreSQL"],
     githubUrl: "https://github.com/Hassan-V/DisasterReliefManagementSystem",
     liveUrl: null,
-    image: "/images/drms-project.webp"
+    image: "/images/drms-project.webp",
   },
   {
     id: 3,
@@ -26,42 +26,58 @@ const projectData = [
     techStack: ["Python", "BeautifulSoup", "Selenium", "Data Processing"],
     githubUrl: null,
     liveUrl: null,
-    image: "/images/ans-project.webp"
-  }
-]
+    image: "/images/ans-project.webp",
+  },
+];
 
-const Projects : React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <section className="section projects">
       <h2>Featured Projects</h2>
       <div className="project-grid">
-        {projectData.map(project => (
+        {projectData.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-image">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                loading="lazy" 
-                width="400" 
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                width="400"
                 height="225"
               />
             </div>
             <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
               <div className="tech-stack">
-                {project.techStack.map(tech => (
-                  <span key={tech} className="tech-tag">{tech}</span>
+                {project.techStack.map((tech) => (
+                  <span key={tech} className="tech-tag">
+                    {tech}
+                  </span>
                 ))}
               </div>
               <div className="project-links">
                 {project.githubUrl ? (
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    GitHub
+                  </a>
                 ) : (
                   <span className="private-project">Private Project</span>
                 )}
                 {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    Live Demo
+                  </a>
                 )}
               </div>
             </div>
@@ -69,7 +85,7 @@ const Projects : React.FC = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
